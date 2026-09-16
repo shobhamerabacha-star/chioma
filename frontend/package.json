@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "cross-env ANALYZE=true next build",
     "size:check": "node scripts/check-bundle-size.js",
-    "start": "next start",
+    "start": "node init && next start",
     "lint": "eslint .",
     "check": "pnpm run lint && pnpm run format:check && pnpm run build",
     "lint:fix": "eslint . --fix",
@@ -23,7 +23,7 @@
     "i18n:audit": "node scripts/i18n-audit.mjs",
     "i18n:audit:fix": "node scripts/i18n-audit.mjs --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",
